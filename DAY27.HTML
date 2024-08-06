@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            background-color: aqua;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide(); // hide attribute slow, fast, time in milisecond, callback function and toggle 
+            })
+
+            $("#show").click(function(){
+                $("p").show(); 
+            })
+
+            $("#show").click(function(){
+                $("p").show(1000,function(){
+                    console.log("now it is show")
+                }); 
+            })
+
+            $("#togg").click(function(){
+                $("p").toggle();
+            })
+        })
+    </script>
+</head>
+<body>
+      <div id="box" class="p">
+        <h1>test box</h1>
+        <p>this is a very beautifull places and attractive nature</p>
+    </div>
+    <br>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="togg">toggle</button>
+</body>
+</html>

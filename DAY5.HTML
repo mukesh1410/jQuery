@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+       $(document).ready(function(){
+        $("#box").click(function(){
+            $("#box h1").css("background-color","red");
+        })
+
+        $("li").click(function(){
+            $("ul li:first").css("background-color","red");
+        })
+
+        $("li").click(function(){
+            $("ul li:nth(3)").css("background-color","red");
+        })
+       })
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h1>this is a h1 tag</h1>
+        <h3>this is a h3 tag</h3>
+        <p>this is a paragraph tag</p>
+    </div>
+    <ul>
+        <li>orange</li>
+        <li>mango</li>
+        <li>grapes</li>
+        <li>banana</li>
+    </ul>
+</body>
+</html>

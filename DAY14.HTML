@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 2px solid black;
+        }
+
+        .boxbg{
+            background-color: blue;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("#box").on("mouseover mouseout",function(){
+            //     $("#box").toggleClass("boxbg")
+            // })
+
+            $("#box").on({
+                "click": function(){
+                    $("#box").css("background-color","yellow");
+                },
+
+                "mouseover": function(){
+                    $("#box").css("background-color","pink");
+                },
+
+                "mouseout": function(){
+                    $("#box").css("background-color","green");
+                }
+            })
+
+            $("#remove").click(function(){
+                $("#box").off("mouseover mouseout");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h1>test box</h1>
+        <p>this is a very beautifull places and attractive nature</p>
+    </div>
+    <button id="remove">remove</button>
+</body>
+</html>

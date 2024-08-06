@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            background-color: aqua;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fain").click(function(){
+                $("p").fadeIn();
+            })
+
+            $("#faou").click(function(){
+                $("p").fadeOut();
+            })
+
+            $("#fato").click(function(){
+                $("p").fadeToggle();
+            })
+
+            $("#to").click(function(){
+                $("p").fadeTo(2000,0.5,function(){
+                    console.log("now it is fadeto");
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="box" class="p">
+        <h1>test box</h1>
+        <p>this is a very beautifull places and attractive nature</p>
+    </div>
+    <br>
+    <button id="fain">fadein</button>
+    <button id="faou">fadeout</button>
+    <button id="fato">fadetoggle</button>
+    <button id="to">fadeto</button>
+</body>
+</html>

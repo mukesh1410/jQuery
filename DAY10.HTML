@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#box").click(function(){
+                var a = $(this).text();
+                console.log(a);
+            })
+
+            $("#box").click(function(){
+                var a = $(this).html();
+                console.log(a);
+            })
+
+            $("#box").click(function(){
+                var a = $(this).attr('class');
+                console.log(a);
+            })
+
+            $("#box").click(function(){
+                var a = $("h1").val("h1");
+                alert(a);
+            })
+
+            $("#submit").click(function(){
+                var a = $("#sname").val();
+                var b = $("#sclass").val();
+                var c = $("#select").val();
+                alert(a+b+c);
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- <div id="box">
+        <h1>this is a h1 tag</h1>
+        <h3>this is a h3 tag</h3>
+        <p>this is a paragraph tag</p>
+    </div> -->
+    <!-- Get Methods -->
+
+    <form id="sform">
+        NAME:
+        <input type="text" id="sname"/>
+        <br>
+        CLASS:
+        <input type="text" id="sclass"/>
+        <br>
+        COUNTRY:
+        <select id="select">
+            <option>new delhi</option>
+            <option>delhi</option>
+            <option>gaziabad</option>
+            <option>gurugram</option>
+            <option>noida</option>
+        </select>
+        <br>
+        <button id="submit">submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("#box").on("click",function(){
+            //     $("h3").html("target element :"+ event.target )
+            // })
+
+            $("#box").click(function(){
+              $("h3").html("target element :"+ event.targe.nodeName);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h2>test box</h2>
+        <p>
+            this is a very beautifull places and attractive nature
+        </p>
+        <button>test button</button>
+    </div>
+    <br>
+    <h3></h3>
+</body>
+</html>

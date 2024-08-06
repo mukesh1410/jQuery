@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#result").on("click dblclick mouseover",function(event){
+                $("h2").html("event:" + event.type)
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <h2></h2>
+</body>
+</html>

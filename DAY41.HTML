@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("#box").on("mouseover mousedown mouseout", function(){
+            //     $("h2").html(event.type + ":" + event.which);
+            // })
+            $("#inputbox").on("keydown", function(){
+                $("h2").html(event.type + ":" + event.which);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <br>
+    <input type="text" id="inputbox"/>
+    <br>
+    <h2></h2>
+
+</body>
+</html>

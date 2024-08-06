@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: aqua;
+            position: relative;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#animate").click(function(){
+                $("#box").animate({left: "200px"}, 3000);
+                $("#box").animate({top: "200px"}, 3000);
+                $("#box").animate({left: "-100px"}, 3000);
+                $("#box").animate({bottom: "200px"}, 3000);
+            })
+
+            $("#stop").click(function(){
+                // $("#box").stop();
+                // $("#box").stop(true);
+                $("#box").stop(true,true);
+            })
+        })
+    </script>
+</head>
+<body>
+     <div id="box">
+        <p>hello world</p>
+     </div>
+     <button id="animate">animate</button>
+     <button id="stop">stop</button>
+</body>
+</html>

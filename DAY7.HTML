@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 250px;
+            height: 250px;
+            background-color: yellow;
+            margin:auto;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>     
+    <script>
+        $(document).ready(function(){
+            $("body").keypress(function(){
+                $(this).css("background-color","red");
+            })
+
+            $("body").keydown(function(){
+                $(this).css("background-color","blue");
+            })
+
+            $("body").keyup(function(){
+                $(this).css("background-color","green");
+            })
+        })  
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h1>this is a h1 tag</h1>
+        <h3>this is a h3 tag</h3>
+        <p>this is a paragraph tag</p>
+    </div>
+</body>
+</html>

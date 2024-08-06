@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            background-color: aqua;
+        }
+    </style>
+     <script src="jquery-3.7.1.min.js"></script>
+     <script>
+         $(document).ready(function(){
+             $("#app").click(function(){
+                 $("#box").before("<h2>hello append</h2>");
+             })
+ 
+             $("#pre").click(function(){
+                 $("#box").after("<h3>hello prepend</h3>")
+             })
+            }) 
+     </script>
+</head>
+<body>
+    <div id="box">
+        <h1>test box</h1>
+        <p>this is a very beautifull places and attractive nature</p>
+    </div>
+    <br>
+    <button  id="app">Before</button>
+    <button id="pre">After</button>
+</body>
+</html>

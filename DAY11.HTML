@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 1px solid black;
+        }
+
+        .red{
+            color: red;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#clickbutton").click(function(){
+                $("#box h1").text("hello world");
+            })
+
+            $("#clickbutton").click(function(){
+                $("#box p").html("<h1>not</h1>");
+            })
+
+            $("#clickbutton").click(function(){
+               $("#box p").attr("class","red");
+            })
+
+            $("#sname").val("hello");
+        })
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h1>this mobile is very expensive</h1>
+        <p>this mobile is not expensive</p>
+    </div>
+    <br>
+    <button id="clickbutton">set</button>
+
+    <form>
+        NAME:
+        <input type="text" id="sname"/>
+        <br>
+        CLASS:
+        <input type="text" id="sclass"/>
+        <br>
+        <br>
+        <button id="submit">submit</button>
+    </form>
+</body>
+</html>

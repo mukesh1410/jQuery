@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="jquery-3.7.1.min.js"></script>     
+<script>
+    $(document).ready(function(){
+        $("#text").focus(function(){
+            $(this).css("background-color","red");
+        })
+
+        $("#text").blur(function(){
+            $(this).css("background-color","yellow");
+        })
+        
+        $("#select").change(function(){
+            $(this).css("background-color","blue");
+        })
+
+        $("#text").select(function(){
+            $(this).css("background-color","green");
+        })
+
+        $("#form").submit(function(){
+            alert("form is subbmited");
+        })
+    })
+</script>
+<body>
+    <form id="form">
+        <input type="text" id="text" placeholder="enter your name"/>
+        <select id="select">                            
+            <option>noida</option>
+            <option>gurugram</option>
+            <option>delhi</option>
+            <option>new delhi</option>
+            <option>greater noida</option>
+        </select>
+        <button id="submit">submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            font-weight: bold;
+        }
+
+        #main1{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(13, 4, 140);
+            font-weight: bold;
+        }
+
+        #main2{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(19, 232, 218);
+            font-weight: bold;
+            display: flex;
+        }
+
+        #main21{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            font-weight: bold;
+            margin-top: 150px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        #main22{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            font-weight: bold;
+            margin-top: 150px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        #main23{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            font-weight: bold;
+            margin-top: 150px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        #main24{
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            font-weight: bold;
+            margin-top: 150px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#main1").children().css("background-color","red");
+            // $("#main1").find().css("background-color","red");
+        })
+    </script>
+</head>
+<body>
+    <div id="main">
+        <h2>main outer</h2>
+        <div id="main1">
+            <h2>outer</h2>
+            <div id="main2">
+                <h2>inner</h2>
+                <div id="main21">A</div>
+                <div id="main22">B</div>
+                <div id="main23">C</div>
+                <div id="main24">D</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
